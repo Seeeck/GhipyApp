@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giphy Explorer</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./modules/axios.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid" style="padding: 0px;">
+        <nav class="navbar navbar-dark bg-dark justify-content-center flex-column" >
+            <div class="mt-3">
+                <img class="mr-2 mb-2" src="./img/giphy-logo-1.svg" alt="" style="width: 80px;">
+                <a style="font-size: 150%;" class="navbar-brand" href="./img/giphy-logo-1.svg">Ghipy Explorer</a>
+            </div>
+            <div class="mt-5" >
+                <div  class="form-group d-flex ">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex">
+                            <input name="inputSearchGif" id="inputSearchGif"  class="form-control form-control-lg "  a placeholder="Buscar gif...">
+                            <button id="submitButton" type="submit" class="btn btn-primary m-2">Buscar</button>
+                        </div>
+                        <div id="historyButtons" class=" row mt-2 mb-5 justify-content-center">
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </nav>
+        <div id="gifsList">
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="app.js">
+    
+</script>
+
+</html>
