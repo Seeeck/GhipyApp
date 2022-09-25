@@ -35,7 +35,8 @@ const getTrendingGifs = () => {
       api_key: 'MTuxrYNBIVqUQ6A5pw1eOkLY5lgzZYu4',
       limit: 25,
       rating: 'r',
-      offset: offset
+      offset: offset,
+      lang:"es"
     }
   })
     .then(function (response) {
@@ -53,8 +54,9 @@ const getSearchGifs = (input) => {
       api_key: 'MTuxrYNBIVqUQ6A5pw1eOkLY5lgzZYu4',
       limit: 25,
       q: input,
-      rating: 'g',
-      offset: offset
+      rating: 'r',
+      offset: offset,
+      lang:"es"
 
     }
   })
@@ -98,7 +100,7 @@ const setTredingGifs = (trendingGifs) => {
 const setSearchedGifs = async (e) => {
   offset = 0
   e.preventDefault()
-  console.log(e.target.textContent)
+  
   if (e.target.textContent !== "Buscar") {
     inputValue = e.target.textContent
     inputSearch.value = ""
@@ -127,7 +129,6 @@ const setSearchedGifs = async (e) => {
       localStorage.setItem('historySearch', JSON.stringify(historySearch))
       loadHistoryButtons()
     }
-    console.log("esoo", inputValue)
     typeGif = "searching"
     gifListDiv.childNodes.forEach(item => item.remove())
     const searchedGifs = (await getSearchGifs(inputValue)).data.data
